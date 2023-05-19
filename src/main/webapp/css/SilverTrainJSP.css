@@ -1,0 +1,212 @@
+@charset "utf-8";
+
+
+/*========= モーダル表示のためのCSS ===============*/
+
+/*infoエリアをはじめは非表示*/
+#info{
+  display: none;
+}
+
+.word {
+  text-align: center;
+}
+
+
+
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container{
+    max-width: 600px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+  background:#ccc;  
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+  background:#666;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+header{
+  background: #333;
+}
+
+h1{
+  font-size:1.5rem;
+  text-align: center;
+  padding: 20px;
+  color: #000000;
+  
+/*     position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0px;
+  margin: 0;
+  color: #000000; */
+}
+
+h2{
+  font-size:1.2rem;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.modalLink {
+  text-align: right;
+}
+
+p,ul{
+  margin-top:20px;  
+}
+
+ul{
+  list-style: none;
+}
+
+small{
+  background:#333;
+  color:#000;
+  display: block;
+  text-align: center;
+  padding:20px;
+}
+
+/* 集計した問題の枠の制御 */
+ 	.result-box {
+	 width: 99%; /* 幅を指定 */
+	 margin: 0 auto; /* 横方向の中央揃え */
+	 padding: 20px; /* 内側の余白を指定 */
+	 border: 1px solid rgba(128, 128, 128, 0.2); /* 枠線を指定 */
+	 border-radius: 10px; /* 枠の丸みを指定 */
+	 box-sizing: border-box; /* paddingを含めたサイズ指定 */
+	 background-color: transparent; /* 背景を透明にする */
+	}
+
+
+/* section{
+  padding:8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+} */
+
+section {
+  border: 0.5px solid #ccc;
+  margin: 0 auto;
+  max-width: 500px; /* セクションの最大幅 */
+  width: calc(100% - 20px); /* 40pxは枠線の幅を表します */
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 半透明の白い影を追加します */
+  border-radius: 20px; /* 角を10pxの丸みにします */
+  text-align: center;
+}
+
+/* section:nth-child(2n){
+  background:#FFFFFF; 
+} */
+
+/* ボタンの中央揃え */
+	form {
+	  text-align: center;
+	}
+	button[type="submit"] {
+	  display: inline-block;
+	  margin: 10px;
+	  text-align: center;
+	  vertical-align: middle;
+	}
+	button[name="choice"][value="1"] {
+	  /* border: 3px solid red; 枠をつけるCSS */
+	  box-shadow: 0 0 5px 2px red;
+	}
+	button[name="choice"][value="2"] {
+	  box-shadow: 0 0 5px 2px blue;
+	}
+	
+	button {
+	  padding: 10px 20px;
+	  border-radius: 20px;
+	  background-color: black;
+	  color: white;
+	  border: none;
+	  box-shadow: none;
+	  transition: .3s;
+	}
+	
+	button.center {
+	display: block;
+	margin: 0 auto;
+	}
+	
+	button.back-btn {
+	  display: block;
+	  margin: 0 auto;
+	}
+	
+	
+	button:hover {
+	  transform: scale(1.1);
+	}
+	
+/* 結果画面の戻るボタンを他のボタンを同じデザインにするCSS */
+/* 	a.back-btn {
+	  display: inline-block;
+	  margin: 10px;
+	  text-align: center;
+	  vertical-align: middle;
+	  padding: 10px 20px;
+	  border-radius: 30px;
+	  background-color: black;
+	  color: white;
+	  border: none;
+	  box-shadow: none;
+	  transition: .3s;
+	  text-decoration: none;
+	}
+	
+	a.back-btn:hover {
+	  transform: scale(1.1);
+	  text-decoration: none;
+	} */
+
+ /* その場で浮き上がる */
+	.fadeIn{
+	animation-name:fadeInAnime;
+	animation-duration:2s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeInAnime{
+	  from {
+	    opacity: 0;
+	  }
+	
+	  to {
+	    opacity: 1;
+	  }
+	}
+
+img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.1;/* 画像の透過率 */
+}
